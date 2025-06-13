@@ -2,15 +2,12 @@ package com.example.Payment.dto;
 
 import lombok.Data;
 
-import java.util.UUID;
-
 @Data
-public class CreateOrderRequest {
-
-    private Double orderAmount;
+public class SaveCustomerRequest {
+    private String customerId;
     private String customerName;
     private String customerEmail;
     private String customerPhone;
-    private String customerId;
-
+    private Double orderAmount;
 }
+

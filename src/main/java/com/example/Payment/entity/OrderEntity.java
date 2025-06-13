@@ -14,16 +14,19 @@ import java.time.LocalDateTime;
 public class OrderEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "order_id", unique = true, nullable = false)
+    @Column(name="customer_id")
+    private String customerId;
+
+    @Column(name = "order_id")
     private String orderId;
 
-    @Column(name = "order_amount", nullable = false)
+    @Column(name = "order_amount")
     private Double orderAmount;
 
-    @Column(name = "currency", nullable = false)
+    @Column(name = "currency")
     private String currency;
 
     @Column(name = "customer_email")
@@ -42,5 +45,7 @@ public class OrderEntity {
 
     private LocalDateTime createdAt;
 
+    @Column(name = "cf_payment_id")
+    private String cfPaymentId;
 
 }

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 public class CashfreeConfig {
     private String clientId;
     private String clientSecret;
+    private String apiBaseUrl;
 
     public String getClientId() {
         return clientId;
