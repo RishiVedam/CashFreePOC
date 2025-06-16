@@ -37,11 +37,11 @@ public class OrderController {
     return ResponseEntity.ok(Map.of("message", "Customer saved successfully"));
     }
 
-    @GetMapping("/{customerId}")
-    public ResponseEntity<CustomerResponse> getCustomer(@PathVariable String customerId) {
-        log.info("{}", Map.of("message", "Fetching customer having customerId:" +customerId, "level", "INFO"));
-        return ResponseEntity.ok(cashfreeService.getCustomer(customerId));
-    }
+//    @GetMapping("/{customerId}")
+//    public ResponseEntity<CustomerResponse> getCustomer(@PathVariable String customerId) {
+//        log.info("{}", Map.of("message", "Fetching customer having customerId:" +customerId, "level", "INFO"));
+//        return ResponseEntity.ok(cashfreeService.getCustomer(customerId));
+//    }
 
     @PostMapping
     public ResponseEntity<?> createOrder(@RequestBody CreateOrderRequest request) {
